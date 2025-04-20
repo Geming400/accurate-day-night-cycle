@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "geming400.accuratedaynightcycle.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"LunarWorldViewMixin",
+		"WorldMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "accurate-day-night-cycle",
+	"version": "${version}",
+	"name": "Accurate day-night cycle",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Geming400"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/accurate-day-night-cycle/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"geming400.accuratedaynightcycle.AccurateDaynightCycle"
+		]
+	},
+	"mixins": [
+		{
+			"config": "accurate-day-night-cycle.mixins.json",
+			"environment": "server"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*",
+		"owo": ">=0.12.20"
+	}
+}
