@@ -1,6 +1,6 @@
 {
-  "text.config.adnc-configs.option.useTimeLibrary":         "Use the time library",
-  "text.config.adnc-configs.option.useTimeLibrary.tooltip": "Use the built-in java time library, which will make the time WAY less precise.",
+  "text.config.adnc-configs.option.useTimeLibrary":         "Calculate time on local time",
+  "text.config.adnc-configs.option.useTimeLibrary.tooltip": "Use the built-in java time library, which will make the time less precise.",
 
   "text.config.adnc-configs.option.calculateEachXticks": "Calculate time each x ticks",
 

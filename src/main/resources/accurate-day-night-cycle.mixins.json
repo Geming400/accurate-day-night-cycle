@@ -4,9 +4,10 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"LunarWorldViewMixin",
+		"BiomeMixin",
 		"WorldMixin"
 	],
 	"injectors": {
-		"defaultRequire": 1
+	"defaultRequire": 1
 	}
 }
