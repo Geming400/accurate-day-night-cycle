@@ -2,8 +2,6 @@ package geming400.accuratedaynightcycle.mixin;
 
 import geming400.accuratedaynightcycle.AccurateDaynightCycle;
 import net.minecraft.world.dimension.DimensionType;
-import org.shredzone.commons.suncalc.MoonIllumination;
-import org.shredzone.commons.suncalc.MoonPhase;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
@@ -33,11 +31,7 @@ public class LunarWorldViewMixin {
             zonedDateTime = ZonedDateTime.now(ZoneOffset.of(AccurateDaynightCycle.CONFIG.gmtTimeZone()));
         }
 
-        MoonIllumination moonIllumination = MoonIllumination.compute()
-                .on(zonedDateTime)
-                .at(AccurateDaynightCycle.CONFIG.latitude(), AccurateDaynightCycle.CONFIG.longitude())
-                .execute();
-
-        return MoonPhase.Phase.FULL_MOON.ordinal();
+        //return MoonPhase.Phase.NEW_MOON.ordinal();
+        return geming400.accuratedaynightcycle.moonphases.MoonPhases.getMoonPhase(zonedDateTime).ordinal();
     }
 }
