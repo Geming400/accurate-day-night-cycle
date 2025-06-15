@@ -1,7 +1,6 @@
 package geming400.accuratedaynightcycle.mixin;
 
 import geming400.accuratedaynightcycle.AccurateDaynightCycle;
-import geming400.accuratedaynightcycle.moonphases.MoonPhases;
 import net.minecraft.world.World;
 import org.shredzone.commons.suncalc.*;
 import org.spongepowered.asm.mixin.Mixin;
