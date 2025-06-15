@@ -1,7 +1,7 @@
 package geming400.accuratedaynightcycle.mixin;
 
-import com.mojang.serialization.Codec;
 import geming400.accuratedaynightcycle.AccurateDaynightCycle;
+import geming400.accuratedaynightcycle.moonphases.MoonPhases;
 import net.minecraft.world.World;
 import org.shredzone.commons.suncalc.*;
 import org.spongepowered.asm.mixin.Mixin;
@@ -84,6 +84,7 @@ public abstract class WorldMixin {
             zoneId = ZoneOffset.systemDefault();
         }
 
+        zonedDateTime = ZonedDateTime.now(zoneId);
         zonedDateTime = ZonedDateTime.now(zoneId);
 
         long MCmoonOffset = getMCmoonPhaseOffset(zonedDateTime);
