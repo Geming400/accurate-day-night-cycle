@@ -14,8 +14,11 @@ public class MoonPhases {
                 .at(AccurateDaynightCycle.CONFIG.latitude(), AccurateDaynightCycle.CONFIG.longitude())
                 .execute();
 
+        // We need at add 180° because
+        // moonIllumination.getPhase() returns a value ∈ [-180, 180] and
+        // MoonPhase.Phase.toPhase() uses an angle ∈ [0, 360]
         return MinecraftMoonPhases.fromSuncalcMoonPhase(
-                MoonPhase.Phase.toPhase(moonIllumination.getPhase())
+                MoonPhase.Phase.toPhase(moonIllumination.getPhase() + 180L)
         );
     }
 
@@ -28,7 +31,6 @@ public class MoonPhases {
         if (minecraftMoonPhase != null) {
             minecraftMoonPhaseFactor = minecraftMoonPhase.ordinal();
         }
-
         return minecraftMoonPhaseFactor * minecraftMoonPhaseLenght;
     }
 }
