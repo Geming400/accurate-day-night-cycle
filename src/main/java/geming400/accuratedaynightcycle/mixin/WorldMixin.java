@@ -66,7 +66,6 @@ public abstract class WorldMixin {
      * @author geming400
      * @reason need to change the returned value
      */
-    @SuppressWarnings("null")
     @Overwrite
     public long getTimeOfDay() {
         if (iter < AccurateDaynightCycle.CONFIG.calculateEachXticks()) {
