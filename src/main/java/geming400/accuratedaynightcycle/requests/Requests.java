@@ -11,20 +11,20 @@ import java.nio.channels.ReadableByteChannel;
 
 @SuppressWarnings("unused")
 public class Requests {
-    public static String get(@NotNull URL url) throws IOException {
+    public static String get(URL url) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
 
         return br.readLine();
     }
 
-    public static String get(@NotNull URI uri) throws IOException {
+    public static String get(URI uri) throws IOException {
         URL _url = uri.toURL();
 
         return get(_url);
     }
 
     @SuppressWarnings("UnusedReturnValue")
-    public static String get(@NotNull String url) throws IOException, URISyntaxException {
+    public static String get(String url) throws IOException, URISyntaxException {
         URL _url = new URI(url).toURL();
 
         return get(_url);
@@ -32,17 +32,17 @@ public class Requests {
 
     // WRITE
 
-    public static void getWrite(@NotNull URL url, @NotNull String path) throws IOException {
+    public static void getWrite(URL url, String path) throws IOException {
         ReadableByteChannel rbc = Channels.newChannel(url.openStream());
         FileOutputStream fos = new FileOutputStream(path);
         fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
     }
 
-    public static void getWrite(@NotNull URI uri, @NotNull String path) throws IOException {
+    public static void getWrite(URI uri, String path) throws IOException {
         getWrite(uri.toURL(), path);
     }
 
-    public static void getWrite(@NotNull String url, @NotNull String path) throws IOException, URISyntaxException {
+    public static void getWrite(String url, String path) throws IOException, URISyntaxException {
         getWrite(new URI(url).toURL(), path);
     }
 }
