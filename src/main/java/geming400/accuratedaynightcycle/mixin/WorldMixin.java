@@ -82,7 +82,7 @@ public abstract class WorldMixin {
         } else {
             zoneId = ZoneOffset.systemDefault();
         }
-        
+
         zonedDateTime = ZonedDateTime.now(zoneId);
 
         long MCmoonOffset = getMCmoonPhaseOffset(zonedDateTime);

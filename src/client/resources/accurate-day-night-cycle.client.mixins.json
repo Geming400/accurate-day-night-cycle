@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "geming400.accuratedaynightcycle.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "SkyRenderingMixin",
+    "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
